@@ -1,0 +1,39 @@
+# Program: Display Employee Details (Id, Name, Salary, Joining Date) using structure
+
+# Define a class to represent structure of employee
+class Employee:
+    def __init__(self, emp_id, name, salary, joining_date):
+        self.emp_id = emp_id
+        self.name = name
+        self.salary = salary
+        self.joining_date = joining_date
+
+    def display(self):
+        print(f"Employee ID      : {self.emp_id}")
+        print(f"Employee Name    : {self.name}")
+        print(f"Employee Salary  : ₹{self.salary}")
+        print(f"Joining Date     : {self.joining_date}")
+        print("-" * 40)
+
+
+# Accept number of employees
+n = int(input("Enter number of employees: "))
+
+# Create a list to store employee records
+employees = []
+
+# Accept employee details
+for i in range(n):
+    print(f"\nEnter details for Employee {i+1}:")
+    emp_id = input("Enter Employee ID: ")
+    name = input("Enter Name: ")
+    salary = float(input("Enter Salary: "))
+    joining_date = input("Enter Joining Date (DD/MM/YYYY): ")
+
+    emp = Employee(emp_id, name, salary, joining_date)
+    employees.append(emp)
+
+# Display all employee details
+print("\n---------- Employee Details ----------")
+for emp in employees:
+    emp.display()
