@@ -1,0 +1,24 @@
+# Program: Accept, display, and find the sum of array elements
+
+# Step 1: Accept size of the array
+n = int(input("Enter the number of elements in the array: "))
+
+# Step 2: Accept array elements
+arr = []  # create an empty list
+print("Enter", n, "elements:")
+for i in range(n):
+    element = int(input(f"Enter element {i+1}: "))
+    arr.append(element)
+
+# Step 3: Display array elements
+print("\nArray elements are:")
+for i in range(n):
+    print(arr[i], end=" ")
+
+# Step 4: Find addition (sum) of all elements
+total = 0
+for i in range(n):
+    total += arr[i]
+
+# Step 5: Display the total
+print("\n\nSum of all array elements =", total)
