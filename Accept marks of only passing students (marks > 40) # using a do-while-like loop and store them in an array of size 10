@@ -1,0 +1,23 @@
+# Program: Accept marks of only passing students (marks > 40)
+# using a do-while-like loop and store them in an array of size 10
+
+marks = []  # list to store passing marks
+
+print("Enter marks of students (only marks > 40 will be accepted):")
+
+while True:  # acts like a do-while loop
+    mark = int(input("Enter marks: "))
+
+    if mark > 40:
+        marks.append(mark)
+        print("Accepted ✅")
+    else:
+        print("Rejected ❌ (Marks must be greater than 40)")
+
+    # Stop once 10 valid marks are accepted
+    if len(marks) == 10:
+        break
+
+print("\nMarks of passing students:")
+for i in range(10):
+    print(f"Student {i+1}: {marks[i]}")
