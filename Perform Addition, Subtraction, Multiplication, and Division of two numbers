@@ -1,0 +1,23 @@
+# Program: Perform Addition, Subtraction, Multiplication, and Division of two numbers
+
+# Accept two numbers from user
+num1 = float(input("Enter first number: "))
+num2 = float(input("Enter second number: "))
+
+# Perform arithmetic operations
+addition = num1 + num2
+subtraction = num1 - num2
+multiplication = num1 * num2
+
+# To avoid division by zero error
+if num2 != 0:
+    division = num1 / num2
+else:
+    division = "Undefined (Cannot divide by zero)"
+
+# Display results
+print("\n---- Results ----")
+print(f"Addition       : {addition}")
+print(f"Subtraction    : {subtraction}")
+print(f"Multiplication : {multiplication}")
+print(f"Division       : {division}")
